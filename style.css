@@ -1,0 +1,95 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #000;
+}
+
+.text {
+    height: auto;
+    width: 100%;
+    background-color: #fff;
+    position: relative;
+    top: 50px;
+}
+
+h1 {
+    font-size: 40px;
+    color: #000;
+    text-align: center;
+    line-height: 60px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.check {
+    height: auto;
+    width: 100%;
+    position: relative;
+    top: 150px;
+    text-align: center;
+}
+
+.check input {
+    height: 50px;
+    width: 400px;
+    border-radius: 25px 0 0 25px;
+    outline: none;
+    border: none;
+    padding-left: 25px;
+    font-size: 18px;
+}
+
+.check button {
+    height: 50px;
+    outline: none;
+    border: none;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: 18px;
+    border-radius: 0 25px 25px 0;
+    color: #000;
+    letter-spacing: 0.25px;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .text h1 {
+        font-size: 30px;
+        color: #000;
+        line-height: 40px;
+    }
+
+    .check{
+        top: 250px;
+    }
+
+    .check input {
+        height: 50px;
+        width: 100%;
+        border-radius: 0;
+        outline: none;
+        border: none;
+        padding-left: 0;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .check button {
+        margin-top: 50px;
+        border-radius: 25px;
+        color: #000;
+    }
+}
+
+.reason{
+    height: auto;
+    width: 100%;
+    background-color: #000;
+    position: relative;
+    top: 350px;
+    text-align: center;
+}

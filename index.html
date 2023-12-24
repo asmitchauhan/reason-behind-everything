@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reason Checker</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="text">
+        <h1>Behind everything there is a reason 💯</h1>
+    </div>
+    <div class="check">
+        <input type="text" id="chkbox" placeholder="Type something to check the reason behind it"> <button
+            onclick="getTextFromInput()">Check</button>
+    </div>
+
+    <div class="reason" id="changecolor">
+        <h1 id="reason"></h1>
+    </div>
+</body>
+<script>
+
+    function thala(input) {
+        if (typeof input === 'string') {
+            length = input.length
+            num = length - 7
+            if (num < 0) {
+                changeBackground()
+                changeclr()
+                playAudio()
+                const myHeading = document.getElementById('reason')
+                myHeading.textContent = `Letters in  ${input} = ${length}, ${length} + ${Math.abs(num)} = 7, Thala for a reason 🥰`;
+            }
+            else if (num > 0) {
+                changeBackground()
+                changeclr()
+                playAudio()
+                const myHeading = document.getElementById('reason')
+                myHeading.textContent = `Letters in  ${input} = ${length}, ${length} - ${num} = 7, Thala for a reason 🥰`;
+            }
+            else {
+                changeBackground()
+                changeclr()
+                playAudio()
+                const myHeading = document.getElementById('reason')
+                myHeading.textContent = `Letters in  ${input} = ${length}, Thala for a reason 🥰`;
+            }
+        }
+        else {
+            num = input - 7
+            if (num < 0) {
+                changeBackground()
+                changeclr()
+                playAudio()
+                const myHeading = document.getElementById('reason')
+                myHeading.textContent = `${input} + ${Math.abs(num)} = 7, Thala for a reason 🥰`;
+
+            }
+            else if (num > 0) {
+                changeBackground()
+                changeclr()
+                playAudio()
+                const myHeading = document.getElementById('reason')
+                myHeading.textContent = `${input} - ${num} = 7, Thala for a reason 🥰`;
+            }
+            else {
+                changeBackground()
+                changeclr()
+                playAudio()
+                const myHeading = document.getElementById('reason')
+                myHeading.textContent = `${input} = 7, Thala for a reason 🥰`;
+            }
+        }
+    }
+
+
+    function getTextFromInput() {
+        value = document.getElementById("chkbox").value;
+        if (/^\d+$/.test(value)) {
+            value = parseInt(value);
+        }
+
+        thala(value)
+    }
+
+
+    function changeBackground() {
+    // Get a random image URL (replace with your image URLs)
+    const images = [
+      'url(' + 'gif1.gif' + ')',
+      'url(' + 'gif2.gif' + ')',
+      'url(' + 'gif3.gif' + ')',
+      'url(' + 'gif4.gif' + ')'
+    ];
+
+    // Get a random index to select a random image
+    const randomIndex = Math.floor(Math.random() * images.length);
+
+    // Set the background image
+    document.body.style.backgroundImage = images[randomIndex];
+  }
+
+  function changeclr() {
+    var myDiv = document.getElementById("changecolor");
+
+    myDiv.style.backgroundColor = "#fff"; 
+  }
+
+  function playAudio() {
+     
+      var audio = new Audio('audio.mp3');
+      audio.play();
+    }
+
+</script>
+
+</html>
